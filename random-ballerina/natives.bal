@@ -18,7 +18,7 @@ import ballerina/java;
 
 # Selects a random decimal number between 0.0 and 1.0.
 # ```ballerina
-# float randomValue = random:random();
+# float randomValue = random:randomDecimal();
 # ```
 # 
 # + return - Selected random value
