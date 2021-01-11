@@ -16,13 +16,13 @@
 
 import ballerina/java;
 
-# Selects a random number between 0.0 and 1.0.
+# Selects a random decimal number between 0.0 and 1.0.
 # ```ballerina
 # float randomValue = random:random();
 # ```
 # 
 # + return - Selected random value
-public isolated function random() returns float = @java:Method {
+public isolated function randomDecimal() returns float = @java:Method {
     name: "random",
     'class: "java.lang.Math"
 } external;

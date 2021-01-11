@@ -18,7 +18,7 @@ import ballerina/test;
 
 @test:Config {}
 isolated function randomTest () {
-    float result = random();
+    float result = randomDecimal();
     test:assertTrue(result > 0 && result < 1, msg = "randomTest result is not between 0 and 1");
 }
 
