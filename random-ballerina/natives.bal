@@ -16,7 +16,7 @@
 
 import ballerina/java;
 
-# Selects a random decimal number between 0.0 and 1.0.
+# Generates a random decimal number between 0.0 and 1.0.
 # ```ballerina
 # float randomValue = random:createDecimal();
 # ```
@@ -27,7 +27,7 @@ public isolated function createDecimal() returns float = @java:Method {
     'class: "java.lang.Math"
 } external;
 
-# Selects a random number between the given start(inclusive) and end(exclusive) values.
+# Generates a random number between the given start(inclusive) and end(exclusive) values.
 # ```ballerina
 # int|error randomInteger = random:createIntInRange(1, 100);
 # ```
