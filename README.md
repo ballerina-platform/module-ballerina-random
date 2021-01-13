@@ -10,7 +10,6 @@ The Random library is one of the standard library modules of the<a target="_blan
 
 This module provides functions related to random number generation.
 
-For example demonstrations of the usage, go to [Ballerina By Examples](https://ballerina.io/swan-lake/learn/by-example/).
 
 ## Issues and Projects
 
