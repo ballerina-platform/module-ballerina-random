@@ -17,17 +17,17 @@
 import ballerina/test;
 
 @test:Config {}
-isolated function randomTest () {
-    float result = randomDecimal();
-    test:assertTrue(result > 0 && result < 1, msg = "randomTest result is not between 0 and 1");
+isolated function createDecimalTest() {
+    float result = createDecimal();
+    test:assertTrue(result > 0 && result < 1, msg = "createDecimalTest result is not between 0 and 1");
 }
 
 @test:Config {}
-isolated function randomInRangeTest() {
-    int|error result = randomInRange(5, 10);
+isolated function createIntInRangeTest() {
+    int|error result = createIntInRange(5, 10);
     if (result is int) {
-        test:assertTrue(result >= 5 && result < 10, msg = "randomInRangeTest result is not within 5 and 10");
+        test:assertTrue(result >= 5 && result < 10, msg = "createIntInRangeTest result is not within 5 and 10");
     } else {
-        test:assertFail("randomInRangeTest result is not int");
+        test:assertFail("createIntInRangeTest result is not int");
     }
 }

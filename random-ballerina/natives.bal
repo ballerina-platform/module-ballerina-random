@@ -18,24 +18,24 @@ import ballerina/java;
 
 # Selects a random decimal number between 0.0 and 1.0.
 # ```ballerina
-# float randomValue = random:randomDecimal();
+# float randomValue = random:createDecimal();
 # ```
 # 
 # + return - Selected random value
-public isolated function randomDecimal() returns float = @java:Method {
+public isolated function createDecimal() returns float = @java:Method {
     name: "random",
     'class: "java.lang.Math"
 } external;
 
 # Selects a random number between the given start(inclusive) and end(exclusive) values.
 # ```ballerina
-# int|error randomInteger = random:randomInRange(1, 100);
+# int|error randomInteger = random:createIntInRange(1, 100);
 # ```
 # 
 # + startRange - Range start value
 # + endRange - Range end value
 # + return - Selected random value or else `Error` if start range is greater than the end range
-public isolated function randomInRange(int startRange, int endRange) returns int|Error = @java:Method {
+public isolated function createIntInRange(int startRange, int endRange) returns int|Error = @java:Method {
     name: "randomInRange",
     'class: "org.ballerinalang.stdlib.random.nativeimpl.ExternMethods"
 } external;
