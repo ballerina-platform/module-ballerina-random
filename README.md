@@ -27,7 +27,7 @@ This repository contains only the source code of the module.
    
         > **Note:** Set the JAVA_HOME environment variable to the path name of the directory into which you installed JDK.
      
-2. Export Github Personal access token with read package permissions as follows,
+2. Export your Github Personal access token with the read package permissions as follows.
    
               export packageUser=<Username>
               export packagePAT=<Personal access token>
