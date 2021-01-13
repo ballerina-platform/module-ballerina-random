@@ -1,0 +1,10 @@
+[package]
+org = "ballerina"
+name = "random"
+version = "@toml.version@"
+
+[[platform.java11.dependency]]
+path = "../random-native/build/libs/random-native-@project.version@.jar"
+groupId = "ballerina"
+artifactId = "random"
+version = "@project.version@"
