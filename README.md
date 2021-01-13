@@ -6,7 +6,7 @@ Ballerina Random Library
   [![Github issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-standard-library/module/random.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-standard-library/labels/module%2Frandom)
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-The Random library is one of the standard library modules of the<a target="_blank" href="https://ballerina.io/"> Ballerina</a> language.
+The Random library is one of the standard library modules of the <a target="_blank" href="https://ballerina.io/">Ballerina</a> language.
 
 This module provides functions related to random number generation.
 
