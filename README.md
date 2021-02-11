@@ -1,4 +1,4 @@
-Ballerina Random Library
+Ballerina Random Package
 ===================
 
   [![Build](https://github.com/ballerina-platform/module-ballerina-random/workflows/Build/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions?query=workflow%3ABuild)
@@ -6,15 +6,15 @@ Ballerina Random Library
   [![Github issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-standard-library/module/random.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-standard-library/labels/module%2Frandom)
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-The Random library is one of the standard library modules of the <a target="_blank" href="https://ballerina.io/">Ballerina</a> language.
+The Random library is one of the standard library packages of the <a target="_blank" href="https://ballerina.io/">Ballerina</a> language.
 
-This module provides functions related to random number generation.
+This package provides functions related to random number generation.
 
 ## Issues and Projects
 
 The **Issues** and **Projects** tabs are disabled for this repository as this is part of the Ballerina Standard Library. To report bugs, request new features, start new discussions, view project boards, etc., go to the Ballerina Standard Library [parent repository](https://github.com/ballerina-platform/ballerina-standard-library).
 
-This repository contains only the source code of the module.
+This repository contains only the source code of the package.
 
 ## Building from the Source
 
@@ -36,7 +36,7 @@ This repository contains only the source code of the module.
 
 Execute the commands below to build from source.
 
-1. To build the library:
+1. To build the package:
 
         ./gradlew clean build
 
@@ -44,7 +44,7 @@ Execute the commands below to build from source.
 
         ./gradlew clean test
 
-3. To build the module without the tests:
+3. To build the package without the tests:
 
         ./gradlew clean build -x test
 
