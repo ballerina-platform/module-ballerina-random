@@ -19,7 +19,7 @@ import ballerina/test;
 @test:Config {}
 isolated function createDecimalTest() {
     float result = createDecimal();
-    test:assertTrue(result > 0 && result < 1, msg = "createDecimalTest result is not between 0 and 1");
+    test:assertTrue(result > 0.0 && result < 1.0, msg = "createDecimalTest result is not between 0 and 1");
 }
 
 @test:Config {}
