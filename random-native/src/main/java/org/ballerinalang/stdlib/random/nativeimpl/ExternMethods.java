@@ -46,6 +46,7 @@ public class ExternMethods {
     }
 
     private static BError createRandomError(String errMsg) {
-        return ErrorCreator.createDistinctError(RANDOM_ERROR, getModule(), StringUtils.fromString(errMsg));
+        return ErrorCreator.createError(getModule(), RANDOM_ERROR, StringUtils.fromString(errMsg),
+                null, null);
     }
 }
