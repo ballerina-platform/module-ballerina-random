@@ -31,3 +31,14 @@ isolated function createIntInRangeTest() {
         test:assertFail("createIntInRangeTest result is not int");
     }
 }
+
+@test:Config {}
+isolated function negativeTestforCreateIntInRangeTest() {
+    int|error result = createIntInRange(5000, 10);
+    if (result is error) {
+        test:assertTrue(result.message().includes("End range must be greater than the start range"),
+                     msg = "negativeTestforCreateIntInRangeTest result incorrect");
+    } else {
+        test:assertFail("Result is not mismatch");
+    }
+}

@@ -16,3 +16,6 @@
 
 # Represents Random module related errors.
 public type Error distinct error;
+
+# Represents the arithmetic error.
+public type ArithmeticError distinct Error;
