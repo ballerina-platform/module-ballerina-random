@@ -37,8 +37,8 @@ isolated function negativeTestforCreateIntInRangeTest() {
     int|error result = createIntInRange(5000, 10);
     if (result is error) {
         test:assertTrue(result.message().includes("End range must be greater than the start range"),
-                     msg = "createIntInRangeTest result is not within 5 and 10");
+                     msg = "negativeTestforCreateIntInRangeTest result incorrect");
     } else {
-        test:assertFail("Test result is not match");
+        test:assertFail("Result is not mismatch");
     }
 }
