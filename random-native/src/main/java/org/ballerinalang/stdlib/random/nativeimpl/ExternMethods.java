@@ -24,10 +24,6 @@ import io.ballerina.runtime.api.values.BError;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import static org.ballerinalang.stdlib.random.nativeimpl.Constant.ILLEGAL_ARGUMENT_ERROR_MSG;
-import static org.ballerinalang.stdlib.random.nativeimpl.Constant.RANDOM_ERROR;
-import static org.ballerinalang.stdlib.random.nativeimpl.ModuleUtils.getModule;
-
 /**
  * External functions for ballerina/random library.
  *
@@ -41,12 +37,12 @@ public class ExternMethods {
         try {
             return ThreadLocalRandom.current().nextLong(start, end);
         } catch (IllegalArgumentException ex) {
-            return createRandomError(ILLEGAL_ARGUMENT_ERROR_MSG);
+            return createRandomError(Constant.ILLEGAL_ARGUMENT_ERROR_MSG);
         }
     }
 
     private static BError createRandomError(String errMsg) {
-        return ErrorCreator.createError(getModule(), RANDOM_ERROR, StringUtils.fromString(errMsg),
+        return ErrorCreator.createError(ModuleUtils.getModule(), Constant.RANDOM_ERROR, StringUtils.fromString(errMsg),
                 null, null);
     }
 }
