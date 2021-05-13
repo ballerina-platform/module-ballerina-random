@@ -29,7 +29,7 @@ public isolated function createDecimal() returns float = @java:Method {
 
 # Generates a random number between the given start(inclusive) and end(exclusive) values.
 # ```ballerina
-# int|error randomInteger = random:createIntInRange(1, 100);
+# int randomInteger = check random:createIntInRange(1, 100);
 # ```
 # 
 # + startRange - Range start value
