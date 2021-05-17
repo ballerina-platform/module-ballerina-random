@@ -62,7 +62,7 @@ ballerina{
     testCoverageParam = "--code-coverage --jacoco-xml --includes=org.ballerinalang.stdlib.random.*:ballerina.random.*"
 }
 
-tasks.create("updateTomlVersions"){
+task updateTomlVersions{
     doLast {
         def newConfig = ballerinaConfigFile.text.replace("@project.version@", project.version)
         newConfig = newConfig.replace("@toml.version@", tomlVersion)
@@ -70,7 +70,7 @@ tasks.create("updateTomlVersions"){
     }
 }
 
-tasks.create("revertTomlFile"){
+task revertTomlFile{
     doLast {
         ballerinaConfigFile.text = originalConfig
     }
