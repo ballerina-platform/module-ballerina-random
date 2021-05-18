@@ -31,6 +31,7 @@ buildscript {
 
 
 description = 'Ballerina - Random Ballerina Generator'
+
 def packageName = "random"
 def packageOrg = "ballerina"
 def ballerinaConfigFile = new File("$project.projectDir/Ballerina.toml")
@@ -54,12 +55,13 @@ def stripBallerinaExtensionVersion(String extVersion) {
 apply plugin: 'io.ballerina.plugin'
 
 ballerina {
+    packageOrganization = packageOrg
     module = packageName
     langVersion = ballerinaLangVersion
     testCoverageParam = "--code-coverage --jacoco-xml --includes=org.ballerinalang.stdlib.random.*:ballerina.random.*"
 }
 
-task updateTomlVersions {
+task updateTomlFiles {
     doLast {
         def newConfig = ballerinaConfigFile.text.replace("@project.version@", project.version)
         newConfig = newConfig.replace("@toml.version@", tomlVersion)
@@ -67,7 +69,7 @@ task updateTomlVersions {
     }
 }
 
-task revertTomlFile {
+task revertTomlFiles {
     doLast {
         ballerinaConfigFile.text = originalConfig
     }
@@ -92,8 +94,9 @@ publishing {
     }
 }
 
+updateTomlFiles.dependsOn unpackJballerinaTools
+
 build.dependsOn ":${packageName}-native:build"
 test.dependsOn ":${packageName}-native:build"
-updateTomlVersions.dependsOn unpackJballerinaTools
 publishToMavenLocal.dependsOn build
 publish.dependsOn build
