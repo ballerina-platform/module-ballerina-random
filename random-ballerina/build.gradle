@@ -34,9 +34,9 @@ description = 'Ballerina - Random Ballerina Generator'
 
 def packageName = "random"
 def packageOrg = "ballerina"
+def tomlVersion = stripBallerinaExtensionVersion("${project.version}")
 def ballerinaConfigFile = new File("$project.projectDir/Ballerina.toml")
 def originalConfig = ballerinaConfigFile.text
-def tomlVersion = stripBallerinaExtensionVersion("${project.version}")
 
 def stripBallerinaExtensionVersion(String extVersion) {
     if (extVersion.matches(project.ext.timestampedVersionRegex)) {
