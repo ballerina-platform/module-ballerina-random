@@ -9,7 +9,7 @@ Ballerina Random Package
 
 The Random library is one of the standard library packages of the <a target="_blank" href="https://ballerina.io/">Ballerina</a> language.
 
-This package provides functions related to pseudo-random number generation.
+This package provides functions related to the pseudo-random number generation.
 
 ## Issues and Projects
 
