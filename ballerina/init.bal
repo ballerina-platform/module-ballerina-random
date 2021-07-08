@@ -21,5 +21,5 @@ function init() {
 }
 
 function setModule() = @java:Method {
-    'class: "org.ballerinalang.stdlib.random.nativeimpl.ModuleUtils"
+    'class: "io.ballerina.stdlib.random.nativeimpl.ModuleUtils"
 } external;

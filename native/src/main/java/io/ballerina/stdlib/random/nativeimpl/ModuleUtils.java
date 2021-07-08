@@ -16,16 +16,31 @@
  * under the License.
  */
 
-package org.ballerinalang.stdlib.random.nativeimpl;
+package io.ballerina.stdlib.random.nativeimpl;
+
+import io.ballerina.runtime.api.Environment;
+import io.ballerina.runtime.api.Module;
 
 /**
- * Constants related to random operations.
+ * This class will hold module related utility functions.
  *
  * @since 1.1.0
  */
-public class Constant {
+public class ModuleUtils {
 
-    static final String RANDOM_ERROR = "ArithmeticError";
+    /**
+     * Random standard library package ID.
+     */
+    private static Module randomModule = null;
 
-    public static final String ILLEGAL_ARGUMENT_ERROR_MSG = "End range must be greater than the start range";
+    private ModuleUtils() {
+    }
+
+    public static void setModule(Environment env) {
+        randomModule = env.getCurrentModule();
+    }
+
+    public static Module getModule() {
+        return randomModule;
+    }
 }

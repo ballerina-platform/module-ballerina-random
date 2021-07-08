@@ -11,9 +11,13 @@ plugins {
     id "com.gradle.enterprise" version "3.2"
 }
 
-rootProject.name = 'random'
-include(':build-config:checkstyle')
-include ':random-native', ':random-ballerina'
+include ':checkstyle'
+include ':random-native'
+include ':random-ballerina'
+
+project(':checkstyle').projectDir = file("build-config${File.separator}checkstyle")
+project(':random-native').projectDir = file('native')
+project(':random-ballerina').projectDir = file('ballerina')
 
 gradleEnterprise {
     buildScan {

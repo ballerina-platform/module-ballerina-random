@@ -4,7 +4,5 @@ name = "random"
 version = "@toml.version@"
 
 [[platform.java11.dependency]]
-path = "../random-native/build/libs/random-native-@project.version@.jar"
-groupId = "ballerina"
-artifactId = "random"
+path = "../native/build/libs/random-native-@project.version@.jar"
 version = "@project.version@"

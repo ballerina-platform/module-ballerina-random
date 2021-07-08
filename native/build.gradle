@@ -24,7 +24,7 @@ description = 'Ballerina - Random Java Utils'
 dependencies {
     implementation group: 'org.ballerinalang', name: 'ballerina-lang', version: "${ballerinaLangVersion}"
     implementation group: 'org.ballerinalang', name: 'ballerina-runtime', version: "${ballerinaLangVersion}"
-    checkstyle project(":build-config:checkstyle")
+    checkstyle project(':checkstyle')
     checkstyle "com.puppycrawl.tools:checkstyle:${puppycrawlCheckstyleVersion}"
 }
 
@@ -70,8 +70,7 @@ tasks.withType(Checkstyle) {
 }
 
 spotbugsMain.finalizedBy validateSpotbugs
-checkstyleMain.dependsOn(":build-config:checkstyle:downloadMultipleFiles")
-
+checkstyleMain.dependsOn(":checkstyle:downloadMultipleFiles")
 
 compileJava {
     doFirst {
