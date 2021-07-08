@@ -11,13 +11,21 @@
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
+ * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
  */
 
-module io.ballerina.stdlib.random {
-    requires io.ballerina.lang;
-    requires io.ballerina.runtime;
-    exports org.ballerinalang.stdlib.random.nativeimpl;
+package io.ballerina.stdlib.random.nativeimpl;
+
+/**
+ * Constants related to random operations.
+ *
+ * @since 1.1.0
+ */
+public class Constant {
+
+    static final String RANDOM_ERROR = "ArithmeticError";
+
+    public static final String ILLEGAL_ARGUMENT_ERROR_MSG = "End range must be greater than the start range";
 }
