@@ -70,7 +70,7 @@ tasks.withType(Checkstyle) {
 }
 
 spotbugsMain.finalizedBy validateSpotbugs
-checkstyleMain.dependsOn(":checkstyle:downloadMultipleFiles")
+checkstyleMain.dependsOn(":checkstyle:downloadCheckstyleRuleFiles")
 
 compileJava {
     doFirst {

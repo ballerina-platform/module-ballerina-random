@@ -5,4 +5,3 @@ version = "@toml.version@"
 
 [[platform.java11.dependency]]
 path = "../native/build/libs/random-native-@project.version@.jar"
-version = "@project.version@"
