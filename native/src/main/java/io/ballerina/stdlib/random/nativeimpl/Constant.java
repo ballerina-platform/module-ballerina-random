@@ -25,6 +25,8 @@ package io.ballerina.stdlib.random.nativeimpl;
  */
 public class Constant {
 
+    private Constant() {}
+
     static final String RANDOM_ERROR = "ArithmeticError";
 
     public static final String ILLEGAL_ARGUMENT_ERROR_MSG = "End range must be greater than the start range";
