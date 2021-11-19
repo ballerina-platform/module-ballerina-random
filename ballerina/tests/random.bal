@@ -25,7 +25,7 @@ isolated function createDecimalTest() {
 @test:Config {}
 isolated function createIntInRangeTest() {
     int|error result = createIntInRange(5, 10);
-    if (result is int) {
+    if result is int {
         test:assertTrue(result >= 5 && result < 10, msg = "createIntInRangeTest result is not within 5 and 10");
     } else {
         test:assertFail("createIntInRangeTest result is not int");
@@ -35,7 +35,7 @@ isolated function createIntInRangeTest() {
 @test:Config {}
 isolated function negativeTestforCreateIntInRangeTest() {
     int|error result = createIntInRange(5000, 10);
-    if (result is error) {
+    if result is error {
         test:assertTrue(result.message().includes("End range must be greater than the start range"),
                      msg = "negativeTestforCreateIntInRangeTest result incorrect");
     } else {
