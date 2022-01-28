@@ -34,7 +34,7 @@ public isolated function createDecimal() returns float = @java:Method {
 # 
 # + startRange - Range start value
 # + endRange - Range end value
-# + return - Selected random value or else a `random:Error` if the start range is greater than the end range
+# + return - Selected random value or else, a `random:Error` if the start range is greater than the end range
 public isolated function createIntInRange(int startRange, int endRange) returns int|Error = @java:Method {
     name: "randomInRange",
     'class: "io.ballerina.stdlib.random.nativeimpl.ExternMethods"
