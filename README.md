@@ -1,4 +1,4 @@
-Ballerina Random Package
+Ballerina Random Library
 ===================
 
   [![Build](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml)
@@ -7,9 +7,9 @@ Ballerina Random Package
   [![Github issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-standard-library/module/random.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-standard-library/labels/module%2Frandom)
   [![codecov](https://codecov.io/gh/ballerina-platform/module-ballerina-random/branch/main/graph/badge.svg)](https://codecov.io/gh/ballerina-platform/module-ballerina-random)
 
-The Random library is one of the standard library packages of the <a target="_blank" href="https://ballerina.io/">Ballerina</a> language.
+This library provides APIs to generate pseudo-random numbers.
 
-This package provides functions related to the pseudo-random number generation.
+The generated values are selected pseudo-randomly with uniform distribution from a particular range.
 
 ## Issues and Projects
 
@@ -87,3 +87,5 @@ All contributors are encouraged to read the [Ballerina Code of Conduct](https://
 
 * Chat live with us via our [Slack channel](https://ballerina.io/community/slack/).
 * Post all technical questions on Stack Overflow with the [#ballerina](https://stackoverflow.com/questions/tagged/ballerina) tag.
+* For more information go to the [`random` library](https://lib.ballerina.io/ballerina/random/latest).
+* For example demonstrations of the usage, go to [Ballerina By Examples](https://ballerina.io/swan-lake/learn/by-example/).
