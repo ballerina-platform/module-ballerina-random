@@ -35,7 +35,7 @@ public isolated function createDecimal() returns float {
 # ```ballerina
 # int randomInteger = check random:createIntInRange(1, 100);
 # ```
-#
+# 
 # + startRange - Range start value
 # + endRange - Range end value
 # + return - Selected random value or else, a `random:Error` if the start range is greater than the end range

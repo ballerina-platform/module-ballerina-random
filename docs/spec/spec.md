@@ -24,7 +24,20 @@ The conforming implementation of the specification is released and included in t
 ## 1. Overview
 This specification elaborates on the random number generation functions available in the Random library.
 
-## 2. Random number generation
+## 2. Linear Congruential Generator
+The [Linear Congruential Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) algorithm is used to generate random numbers. The generator is defined by,
+```
+x1 = (a * x0 + c) % m
+```
+
+where `x0` is the seed, `a` is the multiplier, `c` is the increment and `m` is the modulus. The following values are used in the formula.
+- a = 25214903917
+- c = 11
+- m = 2^48
+
+For x0 (seed), the current time in milliseconds is used.
+
+## 3. Random number generation
 A random decimal number between 0.0 and 1.0 can be generated using the `random:createDecimal()` function.
 ```ballerina
 float randomValue = random:createDecimal();
