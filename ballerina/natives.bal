@@ -16,10 +16,10 @@
 
 import ballerina/time;
 
-final float & readonly a = 25214903917;
-final float & readonly c = 11;
-final float & readonly m = float:pow(2, 48);
-isolated float x0 = currentTimeInMilliSeconds();
+const decimal a = 25214903917;
+const decimal c = 11;
+final decimal & readonly m = <decimal>float:pow(2, 48);
+isolated decimal x0 = currentTimeInMilliSeconds();
 
 # Generates a random decimal number between 0.0 and 1.0.
 # ```ballerina
@@ -28,26 +28,26 @@ isolated float x0 = currentTimeInMilliSeconds();
 #
 # + return - Selected random value
 public isolated function createDecimal() returns float {
-    return lcg() / m;
+    return <float>(lcg() / m);
 }
 
 # Generates a random number between the given start(inclusive) and end(exclusive) values.
 # ```ballerina
 # int randomInteger = check random:createIntInRange(1, 100);
 # ```
-# 
+#
 # + startRange - Range start value
 # + endRange - Range end value
 # + return - Selected random value or else, a `random:Error` if the start range is greater than the end range
 public isolated function createIntInRange(int startRange, int endRange) returns int|Error {
     if startRange > endRange {
-        return error Error("End range must be greater than the start range");
+        return error Error("End range value must be greater than the start range value");
     }
-    return <int>(lcg() / m * <float>(endRange - startRange) + <float>startRange);
+    return <int>(lcg() / m * <decimal>(endRange - startRange) + <decimal>startRange);
 }
 
-isolated function lcg() returns float {
-    float x1;
+isolated function lcg() returns decimal {
+    decimal x1;
     lock {
         x1 = (a * x0 + c) % m;
         x0 = x1;
@@ -55,8 +55,8 @@ isolated function lcg() returns float {
     return x1;
 }
 
-isolated function currentTimeInMilliSeconds() returns float {
+isolated function currentTimeInMilliSeconds() returns decimal {
     time:Utc utc = time:utcNow();
     decimal mills = <decimal>(utc[0] * 1000) + utc[1] * 1000;
-    return <float>decimal:round(mills);
+    return decimal:round(mills);
 }
