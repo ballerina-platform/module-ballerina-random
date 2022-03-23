@@ -43,7 +43,7 @@ public isolated function createIntInRange(int startRange, int endRange) returns 
     if startRange > endRange {
         return error Error("End range value must be greater than the start range value");
     }
-    return <int>(lcg() / m * <decimal>(endRange - startRange) + <decimal>startRange);
+    return <int>(lcg() / m * <decimal>(endRange - startRange - 1) + <decimal>startRange);
 }
 
 isolated function lcg() returns decimal {
