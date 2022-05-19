@@ -25,7 +25,7 @@ The conforming implementation of the specification is released and included in t
 This specification elaborates on the random number generation functions available in the Random library.
 
 ## 2. Linear Congruential Generator
-The [Linear Congruential Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) algorithm is used to generate random numbers. The generator is defined by,
+The [Linear Congruential Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) algorithm is used to generate random numbers in range. The generator is defined by,
 ```
 x1 = (a * x0 + c) % m
 ```
