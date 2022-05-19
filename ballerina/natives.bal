@@ -15,6 +15,7 @@
 // under the License.
 
 import ballerina/time;
+import ballerina/jballerina.java;
 
 const decimal a = 25214903917;
 const decimal c = 11;
@@ -28,10 +29,11 @@ isolated decimal x0 = currentTimeInMilliSeconds();
 #
 # + return - Selected random value
 public isolated function createDecimal() returns float {
-    return <float>(lcg() / m);
+    return nextFloat();
 }
 
 # Generates a random number between the given start(inclusive) and end(exclusive) values.
+# Please note that the number is not generated using a cryptographically secured method. 
 # ```ballerina
 # int randomInteger = check random:createIntInRange(1, 100);
 # ```
@@ -60,3 +62,17 @@ isolated function currentTimeInMilliSeconds() returns decimal {
     decimal mills = <decimal>(utc[0] * 1000) + utc[1] * 1000;
     return decimal:round(mills);
 }
+
+isolated function nextFloat() returns float {
+    handle secureRandomObj = newSecureRandom();
+    return nextFloatExtern(secureRandomObj);
+}
+
+isolated function newSecureRandom() returns handle = @java:Constructor {
+    'class: "java.security.SecureRandom"
+} external;
+
+isolated function nextFloatExtern(handle secureRandomObj) returns float = @java:Method {
+    name: "nextFloat",
+    'class: "java.security.SecureRandom"
+} external;
