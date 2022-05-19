@@ -33,7 +33,7 @@ public isolated function createDecimal() returns float {
 }
 
 # Generates a random number between the given start(inclusive) and end(exclusive) values.
-# Please note that the number is not generated using a cryptographically secured method. 
+# Please note that the generated number is not cryptographically secured.
 # ```ballerina
 # int randomInteger = check random:createIntInRange(1, 100);
 # ```
