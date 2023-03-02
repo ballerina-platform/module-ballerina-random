@@ -1,4 +1,4 @@
-Ballerina Random Library
+Ballerina Random Librar
 ===================
 
   [![Build](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml)
