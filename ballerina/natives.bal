@@ -18,7 +18,7 @@ import ballerina/time;
 import ballerina/jballerina.java;
 
 const decimal a = 25214903917;
-const decimal c = 11;
+const decimal c = 17;
 final decimal & readonly m = <decimal>float:pow(2, 48);
 isolated decimal x0 = currentTimeInMilliSeconds();
 
