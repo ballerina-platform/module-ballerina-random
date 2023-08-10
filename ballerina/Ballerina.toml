@@ -1,13 +1,13 @@
 [package]
 org = "ballerina"
 name = "random"
-version = "1.4.0"
+version = "1.5.0"
 authors = ["Ballerina"]
 keywords = ["pseudo-random"]
 repository = "https://github.com/ballerina-platform/module-ballerina-random"
 icon = "icon.png"
 license = ["Apache-2.0"]
-distribution = "2201.7.0"
+distribution = "2201.8.0"
 
-[platform.java11]
+[platform.java17]
 graalvmCompatible = true
