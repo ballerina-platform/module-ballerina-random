@@ -42,3 +42,36 @@ isolated function negativeTestforCreateIntInRangeTest() {
         test:assertFail("Result is not mismatch");
     }
 }
+
+@test:Config {}
+isolated function doesNotThrowForFullIntRangeTest() {
+    int|error result = createIntInRange(int:MIN_VALUE, int:MAX_VALUE);
+    if result is int {
+        test:assertTrue(result >= int:MIN_VALUE && result < int:MAX_VALUE,
+                     msg = "createIntInRangeTest result is not within 5 and 10");
+    } else {
+        test:assertFail("createIntInRangeTest result is not int");
+    }
+}
+
+@test:Config {}
+isolated function doesNotThrowForAlmostFullIntRangeRTest() {
+    int|error result = createIntInRange(int:MIN_VALUE+1, int:MAX_VALUE);
+    if result is int {
+        test:assertTrue(result >= int:MIN_VALUE+1 && result < int:MAX_VALUE,
+                     msg = "createIntInRangeTest result is not within 5 and 10");
+    } else {
+        test:assertFail("createIntInRangeTest result is not int");
+    }
+}
+
+@test:Config {}
+isolated function doesNotThrowForAlmostFullIntRangeLTest() {
+    int|error result = createIntInRange(int:MIN_VALUE, int:MAX_VALUE-1);
+    if result is int {
+        test:assertTrue(result >= int:MIN_VALUE && result < int:MAX_VALUE-1,
+                     msg = "createIntInRangeTest result is not within 5 and 10");
+    } else {
+        test:assertFail("createIntInRangeTest result is not int");
+    }
+}
