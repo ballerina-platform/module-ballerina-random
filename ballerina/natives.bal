@@ -42,11 +42,31 @@ public isolated function createDecimal() returns float {
 # + endRange - Range end value
 # + return - Selected random value or else, a `random:Error` if the start range is greater than the end range
 public isolated function createIntInRange(int startRange, int endRange) returns int|Error {
-    if startRange > endRange {
+    if startRange >= endRange {
         return error Error("End range value must be greater than the start range value");
     }
-    return <int>(lcg() / m * <decimal>(endRange - startRange - 1) + <decimal>startRange);
+    
+    int range = endRange - startRange;
+    if (range == int:MAX_VALUE) {
+       
+        return error Error("Full int range is requested.");
+    }
+    
+    // Generate a random number within the range.
+    int randomValue = randomInt(range);
+    
+    // Add the random value to the start range to get the final result.
+    int result = startRange + randomValue;
+    
+    return result;
 }
+
+function randomInt(int range) returns int {
+    // Use a suitable random number generator function.
+    // You can replace this with the random generator you prefer.
+    return check random:createIntInRange(0, range);
+}
+
 
 isolated function lcg() returns decimal {
     decimal x1;
