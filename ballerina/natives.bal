@@ -1,3 +1,4 @@
+import ballerina/jballerina.java;
 // Copyright (c) 2021 WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
 //
 // WSO2 Inc. licenses this file to you under the Apache License,
@@ -13,9 +14,7 @@
 // KIND, either express or implied.  See the License for the
 // specific language governing permissions and limitations
 // under the License.
-
 import ballerina/time;
-import ballerina/jballerina.java;
 
 const decimal a = 25214903917;
 const decimal c = 17;
@@ -45,7 +44,7 @@ public isolated function createIntInRange(int startRange, int endRange) returns 
     if startRange > endRange {
         return error Error("End range value must be greater than the start range value");
     }
-    return <int>(lcg() / m * <decimal>(endRange - startRange - 1) + <decimal>startRange);
+    return <int>(lcg() / m * (<decimal>(endRange - 1) - <decimal>startRange) + <decimal>startRange);
 }
 
 isolated function lcg() returns decimal {
