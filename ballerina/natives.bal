@@ -1,3 +1,4 @@
+import ballerina/jballerina.java;
 // Copyright (c) 2021 WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
 //
 // WSO2 Inc. licenses this file to you under the Apache License,
@@ -13,9 +14,7 @@
 // KIND, either express or implied.  See the License for the
 // specific language governing permissions and limitations
 // under the License.
-
 import ballerina/time;
-import ballerina/jballerina.java;
 
 const decimal a = 25214903917;
 const decimal c = 17;

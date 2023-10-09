@@ -13,7 +13,6 @@
 // KIND, either express or implied.  See the License for the
 // specific language governing permissions and limitations
 // under the License.
-
 import ballerina/test;
 
 @test:Config {}
@@ -37,7 +36,7 @@ isolated function negativeTestforCreateIntInRangeTest() {
     int|error result = createIntInRange(5000, 10);
     if result is error {
         test:assertTrue(result.message().includes("End range value must be greater than the start range value"),
-                     msg = "negativeTestforCreateIntInRangeTest result incorrect");
+                    msg = "negativeTestforCreateIntInRangeTest result incorrect");
     } else {
         test:assertFail("Result is not mismatch");
     }
@@ -48,7 +47,7 @@ isolated function doesNotThrowForFullIntRangeTest() {
     int|error result = createIntInRange(int:MIN_VALUE, int:MAX_VALUE);
     if result is int {
         test:assertTrue(result >= int:MIN_VALUE && result < int:MAX_VALUE,
-                     msg = "createIntInRangeTest result is not within 5 and 10");
+                    msg = "createIntInRangeTest result is not within 5 and 10");
     } else {
         test:assertFail("createIntInRangeTest result is not int");
     }
@@ -56,10 +55,10 @@ isolated function doesNotThrowForFullIntRangeTest() {
 
 @test:Config {}
 isolated function doesNotThrowForAlmostFullIntRangeRTest() {
-    int|error result = createIntInRange(int:MIN_VALUE+1, int:MAX_VALUE);
+    int|error result = createIntInRange(int:MIN_VALUE + 1, int:MAX_VALUE);
     if result is int {
-        test:assertTrue(result >= int:MIN_VALUE+1 && result < int:MAX_VALUE,
-                     msg = "createIntInRangeTest result is not within 5 and 10");
+        test:assertTrue(result >= int:MIN_VALUE + 1 && result < int:MAX_VALUE,
+                    msg = "createIntInRangeTest result is not within 5 and 10");
     } else {
         test:assertFail("createIntInRangeTest result is not int");
     }
@@ -67,10 +66,10 @@ isolated function doesNotThrowForAlmostFullIntRangeRTest() {
 
 @test:Config {}
 isolated function doesNotThrowForAlmostFullIntRangeLTest() {
-    int|error result = createIntInRange(int:MIN_VALUE, int:MAX_VALUE-1);
+    int|error result = createIntInRange(int:MIN_VALUE, int:MAX_VALUE - 1);
     if result is int {
-        test:assertTrue(result >= int:MIN_VALUE && result < int:MAX_VALUE-1,
-                     msg = "createIntInRangeTest result is not within 5 and 10");
+        test:assertTrue(result >= int:MIN_VALUE && result < int:MAX_VALUE - 1,
+                    msg = "createIntInRangeTest result is not within 5 and 10");
     } else {
         test:assertFail("createIntInRangeTest result is not int");
     }
