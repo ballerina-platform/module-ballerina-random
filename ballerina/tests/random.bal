@@ -32,11 +32,33 @@ isolated function createIntInRangeTest() {
 }
 
 @test:Config {}
+isolated function createIntInRangeWithSingleElementTest() {
+    final int someInt = 123;
+    int|error result = createIntInRange(someInt, someInt + 1);
+    if result is int {
+        test:assertTrue(result == someInt, msg = "createIntInRangeWithSingleElementTest result is not " + someInt.toString());
+    } else {
+        test:assertFail("createIntInRangeTest result is not int");
+    }
+}
+
+@test:Config {}
 isolated function negativeTestforCreateIntInRangeTest() {
     int|error result = createIntInRange(5000, 10);
     if result is error {
         test:assertTrue(result.message().includes("End range value must be greater than the start range value"),
                     msg = "negativeTestforCreateIntInRangeTest result incorrect");
+    } else {
+        test:assertFail("Result is not mismatch");
+    }
+}
+
+@test:Config {}
+isolated function negativeTestforCreateIntInRange2Test() {
+    int|error result = createIntInRange(17, 17);
+    if result is error {
+        test:assertTrue(result.message().includes("End range value must be greater than the start range value"),
+                    msg = "negativeTestforCreateIntInRange2Test result incorrect");
     } else {
         test:assertFail("Result is not mismatch");
     }

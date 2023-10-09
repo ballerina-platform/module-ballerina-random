@@ -41,7 +41,7 @@ public isolated function createDecimal() returns float {
 # + endRange - Range end value
 # + return - Selected random value or else, a `random:Error` if the start range is greater than the end range
 public isolated function createIntInRange(int startRange, int endRange) returns int|Error {
-    if startRange > endRange {
+    if startRange >= endRange {
         return error Error("End range value must be greater than the start range value");
     }
     return <int>(lcg() / m * (<decimal>(endRange - 1) - <decimal>startRange) + <decimal>startRange);
