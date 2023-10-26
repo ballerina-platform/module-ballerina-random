@@ -8,6 +8,7 @@ This file contains all the notable changes done to the Ballerina TCP package thr
 ### Changed
 
 - [Make `createIntInRange` work for full int range ](https://github.com/ballerina-platform/ballerina-standard-library/issues/4744)
+- [Remove duplicated codecov badge](https://github.com/ballerina-platform/ballerina-standard-library/issues/4893)
 - [Prohibit calling `createIntInRange` with empty range](https://github.com/ballerina-platform/ballerina-standard-library/issues/4892)
 
 ## [1.5.0] - 2023-09-15
