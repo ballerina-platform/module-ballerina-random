@@ -14,7 +14,7 @@ This file contains all the notable changes done to the Ballerina TCP package thr
 ## [1.5.0] - 2023-09-15
 
 ### Added
-- Make Java17 compatible
+- Make Java21 compatible
 
 ## [1.4.0] - 2023-06-30
 
