@@ -1,7 +1,7 @@
 [package]
 org = "ballerina"
 name = "random"
-version = "1.6.1"
+version = "1.7.0"
 authors = ["Ballerina"]
 keywords = ["pseudo-random"]
 repository = "https://github.com/ballerina-platform/module-ballerina-random"
