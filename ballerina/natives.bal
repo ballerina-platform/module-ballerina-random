@@ -26,7 +26,7 @@ isolated decimal x0 = currentTimeInMilliSeconds();
 # float randomValue = random:createDecimal();
 # ```
 #
-# + return - Selected random value
+# + return - The random decimal number generated
 public isolated function createDecimal() returns float {
     return nextFloat();
 }
@@ -37,9 +37,9 @@ public isolated function createDecimal() returns float {
 # int randomInteger = check random:createIntInRange(1, 100);
 # ```
 #
-# + startRange - Range start value
-# + endRange - Range end value
-# + return - Selected random value or else, a `random:Error` if the start range is greater than the end range
+# + startRange - The start range value
+# + endRange - The end range value
+# + return - The random number generated within the given range, or an error if the end range value is less than or equal to the start range value
 public isolated function createIntInRange(int startRange, int endRange) returns int|Error {
     if startRange >= endRange {
         return error Error("End range value must be greater than the start range value");
