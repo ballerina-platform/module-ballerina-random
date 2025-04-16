@@ -7,7 +7,7 @@ keywords = ["pseudo-random"]
 repository = "https://github.com/ballerina-platform/module-ballerina-random"
 icon = "icon.png"
 license = ["Apache-2.0"]
-distribution = "2201.8.0"
+distribution = "2201.12.0"
 
-[platform.java17]
+[platform.java21]
 graalvmCompatible = true
