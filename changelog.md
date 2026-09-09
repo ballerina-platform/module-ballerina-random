@@ -3,6 +3,9 @@ This file contains all the notable changes done to the Ballerina TCP package thr
 
 ## [Unreleased]
 
+### Changed
+- [[#9132] Updated Keywords, Reformat README for Connector Store Discoverability](https://github.com/ballerina-platform/ballerina-library/issues/9132)
+
 ### Added
 
 ### Changed
