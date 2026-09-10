@@ -1,5 +1,4 @@
-Ballerina Random Library
-===================
+# Ballerina Random Library
 
   [![Build](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml)
   [![codecov](https://codecov.io/gh/ballerina-platform/module-ballerina-random/branch/main/graph/badge.svg)](https://codecov.io/gh/ballerina-platform/module-ballerina-random)
@@ -8,9 +7,9 @@ Ballerina Random Library
   [![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerina-random.svg)](https://github.com/ballerina-platform/module-ballerina-random/commits/main)
   [![Github issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-standard-library/module/random.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-standard-library/labels/module%2Frandom)
 
-This library provides APIs to generate pseudo-random numbers.
+## Overview
 
-The generated values are selected pseudo-randomly with uniform distribution from a particular range.
+This module provides APIs to generate pseudo-random numbers. The generated values are selected pseudo-randomly with uniform distribution from a particular range.
 
 ## Issues and projects
 
@@ -76,7 +75,7 @@ Execute the commands below to build from source.
 
 ## Contribute to Ballerina
 
-As an open source project, Ballerina welcomes contributions from the community. 
+As an open-source project, Ballerina welcomes contributions from the community. 
 
 For more information, go to the [contribution guidelines](https://github.com/ballerina-platform/ballerina-lang/blob/master/CONTRIBUTING.md).
 
