@@ -1,9 +1,9 @@
 [package]
 org = "ballerina"
 name = "random"
-version = "1.7.1"
+version = "1.7.2"
 authors = ["Ballerina"]
-keywords = ["pseudo-random", "Type/Library", "Area/Built-in", "Name/Random"]
+keywords = ["pseudo-random", "Type/Library", "Area/Built-in", "Area/Data Formats & Utilities", "Name/Random"]
 repository = "https://github.com/ballerina-platform/module-ballerina-random"
 icon = "icon.png"
 license = ["Apache-2.0"]
