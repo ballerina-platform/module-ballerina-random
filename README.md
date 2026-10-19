@@ -2,7 +2,7 @@
 
   [![Build](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-timestamped-master.yml)
   [![codecov](https://codecov.io/gh/ballerina-platform/module-ballerina-random/branch/main/graph/badge.svg)](https://codecov.io/gh/ballerina-platform/module-ballerina-random)
-  [![Trivy](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/trivy-scan.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/trivy-scan.yml)
+  [![Security Scan](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/security-scan.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/security-scan.yml)
   [![GraalVM Check](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-with-bal-test-graalvm.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerina-random/actions/workflows/build-with-bal-test-graalvm.yml)
   [![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerina-random.svg)](https://github.com/ballerina-platform/module-ballerina-random/commits/main)
   [![Github issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-standard-library/module/random.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-standard-library/labels/module%2Frandom)
